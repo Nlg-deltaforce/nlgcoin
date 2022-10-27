@@ -1,0 +1,14 @@
+syntax = "proto3";
+package nlgcoind.nlgcoind;
+
+import "gogoproto/gogo.proto";
+import "nlgcoind/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "nlgcoind/x/nlgcoind/types";
+
+// GenesisState defines the nlgcoind module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
